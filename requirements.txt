@@ -6,3 +6,11 @@ requests==2.31.0
 folium==0.15.1
 streamlit-folium==0.17.0
 nltk==3.8.1
+
+streamlit
+pandas
+folium
+streamlit-folium
+Pillow
+python-dotenv
+requests
