@@ -12,6 +12,7 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 
 # 5. Install Dependencies (Combined step for stability)
+# The full base image should now have the system libraries needed for pandas/Pillow.
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
     pip install --no-cache-dir -r requirements.txt
 
@@ -22,4 +23,4 @@ RUN python -c "import nltk; nltk.download('punkt', quiet=True); nltk.download('s
 COPY . .
 
 # 8. Command to run the Streamlit application
-CMD ["streamlit", "run", "app.py", "--server.port", "10000", "--server.address", "0.0.0.0"]
+CMD ["streamlit", "run", "app/app.py", "--server.port", "10000", "--server.address", "0.0.0.0"]
