@@ -17,7 +17,7 @@ st.set_page_config(
 )
 
 # --- NEW: API Configuration (You MUST replace this placeholder key) ---
-WEATHER_API_KEY = "YOUR_ACTUAL_OPENWEATHERMAP_API_KEY_HERE" # **<-- FIXED: Replaced non-functional key**
+WEATHER_API_KEY = "OPENWEATHERMAP_API_KEY" # **<-- FIXED: Replaced non-functional key**
 WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather"
 # --- END NEW CONFIG ---
 
