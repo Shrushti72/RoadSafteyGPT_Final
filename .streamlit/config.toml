@@ -7,4 +7,4 @@ font="sans serif"
 [runner]
 # Forces Streamlit to use a modern, supported Python version (e.g., 3.11)
 # which avoids the distutils/numpy build issues seen in the console.
-python_version = "3.11"
+python_version = "3.10"
