@@ -1,3 +1,13 @@
-poppler-utils
-tesseract-ocr
-libmagic-dev
+# packages.txt
+# List non-Python system-level dependencies (APT packages) needed 
+# for building or running some Python libraries.
+
+# Example for OpenCV/computer vision
+libgl1
+
+# Example for geospatial libraries like Geopandas/Shapely
+libgeos-dev
+gdal-bin
+
+# Example for specific data science or database tools
+libpq-dev
