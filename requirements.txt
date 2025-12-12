@@ -1,25 +1,20 @@
-# V3: Minimal, Fully Pinned Requirements for Streamlit Cloud Deployment
+# requirements.txt
+# List all your required Python packages, one per line.
 
-# --- Core Streamlit App Functionality ---
-streamlit==1.30.0
-pandas==2.0.3
-requests==2.31.0
-Pillow==10.1.0
-python-dotenv==1.0.0
-folium==0.15.1
-streamlit-folium==0.17.0
+# 1. Essential Streamlit package
+streamlit
 
-# --- Core RAG and LLM Libraries ---
-langchain==0.1.0
-langchain-community==0.0.13
-langchain-core==0.1.7
-langchain-google-genai==3.0.0
-google-generativeai==0.3.2
-openai==1.1.1
-tiktoken==0.5.2
+# 2. Data handling and analysis
+pandas
+numpy
 
-# --- Pinned Versions for Build Stability (Critical to fix build errors) ---
-pydantic==1.10.13
-numpy==1.24.4 
-chromadb==0.4.22
-pypdf==3.17.4
+# 3. Machine Learning (if applicable)
+scikit-learn==1.3.0
+matplotlib
+
+# 4. Specific utilities
+Pillow
+requests
+
+# IMPORTANT: Use exact package names (case-sensitive) and 
+# consider adding version numbers to ensure reproducibility!
