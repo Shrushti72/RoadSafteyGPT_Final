@@ -1,20 +1,45 @@
-# requirements.txt
-# List all your required Python packages, one per line.
-
-# 1. Essential Streamlit package
-streamlit
-
-# 2. Data handling and analysis
-pandas
+# Core RAG and LLM Libraries
+langchain==0.1.0
+langchain-community==0.0.13
+langchain-core>=0.1.7,<0.2
+langchain-google-genai==3.0.0
+pydantic==1.10.13
 numpy
+openai
+tiktoken
+python-dotenv
 
-# 3. Machine Learning (if applicable)
-scikit-learn==1.3.0
-matplotlib
+# PDF Parsing (for MoRTH, IRC:67)
+pypdf  # Simple PDF loader
+unstructured[all-docs] # Advanced parsing for complex PDFs/tables (better for MoRTH)
+pillow # For image handling in multimodal (used by unstructured)
+lxml   # For HTML/XML parsing (part of unstructured dependency)
 
-# 4. Specific utilities
-Pillow
+# Vector Store
+chromadb
+
+# Web Frameworks
+streamlit
+fastapi
+uvicorn
+
+# Mapping
+folium
+streamlit-folium
+
+# Multimodal/Image Handling
+# Use a library that can process images into text/embeddings
+# (e.g., LLaVA via an API, or simply generate descriptions using an LLM like GPT-4V/Gemini)
+# For a standard setup, we'll ensure we can handle base64 images, often using Pillow and a vision model via the 'openai' or 'google-genai' client.
+google-generativeai
+
+# Text Processing
+nltk
+
+# Topic Modeling (LDA)
+gensim
+scikit-learn
+
+# Additional for Streamlit app
 requests
-
-# IMPORTANT: Use exact package names (case-sensitive) and 
-# consider adding version numbers to ensure reproducibility!
+pandas  # Added: Required for data handling (e.g., st.dataframe, st.data_editor)
