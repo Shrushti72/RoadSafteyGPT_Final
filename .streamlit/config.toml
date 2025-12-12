@@ -1,10 +1,30 @@
+# .streamlit/config.toml
+# This file must be placed inside a .streamlit folder 
+
+[general]
+# You can uncomment this line to specify a Python version 
+# that is compatible with your requirements.txt. 
+# Common options are "3.9" or "3.10".
+# pythonVersion = "3.9"
+
+
+[server]
+# The port Streamlit uses to run the app (usually best left as default)
+# port = 8501
+
+# Max number of megabytes a file upload can take.
+# maxUploadSize = 200
+
 [theme]
-primaryColor="#005A9C"  # Updated deep blue for safety focus
-backgroundColor="#F8FAFC"  # Light gray background
-secondaryBackgroundColor="#E0F2FE"  # Light blue for better contrast
-textColor="#0F172A"  # Darker gray for text
-font="sans serif"
-[runner]
-# Forces Streamlit to use a modern, supported Python version (e.g., 3.11)
-# which avoids the distutils/numpy build issues seen in the console.
-python_version = "3.10"
+# Uncomment and change these to customize the look of your app.
+# base = "light"
+# primaryColor = "#F63366"
+# backgroundColor = "#FFFFFF"
+# secondaryBackgroundColor = "#F0F2F6"
+# textColor = "#26282F"
+# font = "sans serif"
+
+
+[browser]
+# Uncomment to automatically rerun the script when any file is changed
+# gatherUsageStats = false
