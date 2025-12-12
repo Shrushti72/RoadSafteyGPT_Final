@@ -1,23 +1,31 @@
-# --- Core Dependencies for Streamlit App (Required by app.py) ---
+# --- Core Streamlit App Functionality (From app.py) ---
 streamlit
 pandas
-requests
 Pillow
+requests
 python-dotenv
 folium
 streamlit-folium
 
-# --- RAG/LLM Core (Pinned versions for stability) ---
+# --- Core RAG and LLM Libraries ---
 langchain==0.1.0
 langchain-community==0.0.13
 langchain-core>=0.1.7,<0.2
 langchain-google-genai==3.0.0
-pydantic==1.10.13
-numpy
+google-generativeai
 openai
 tiktoken
-google-generativeai
+
+# --- Pinned Versions for Build Stability ---
+# Pydantic is a dependency of LangChain. Pinning it avoids conflicts.
+pydantic==1.10.13
+# numpy is the source of the distutils error. Pinning it to a stable, older version 
+# that is known to build correctly on Python 3.10 is essential.
+numpy==1.24.4 
 
 # --- Vector Store & Simple Parsing ---
 chromadb
-pypdf
+pypdf 
+
+# --- Removed Unused/Problematic Packages ---
+# REMOVED: fastapi, uvicorn, nltk, lxml, unstructured[all-docs]
